@@ -5,5 +5,5 @@ class JustTesting(
     val isNonNull: Boolean,
     val nullableNoPrefix: Boolean?,
     val isNullable: Boolean?,
-    @get:JvmName("isNullableWithCustomGet") val isNullableWithCustomGet: Boolean
+    @get:JvmName("getNullableWithCustomGet") val isNullableWithCustomGet: Boolean?
 )
