@@ -1,0 +1,25 @@
+plugins {
+    id 'groovy'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.20'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(project(':kotlin18'))
+    testImplementation platform('org.spockframework:spock-bom:2.0-groovy-3.0')
+    testImplementation group: 'org.spockframework', name: 'spock-core'
+    testImplementation group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.8'
+}
+
+kotlin {
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,4 @@
+rootProject.name = 'groovy-kotlin-props'
+include 'groovy3'
+include 'groovy4'
+include 'kotlin18'
